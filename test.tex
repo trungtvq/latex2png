@@ -1,0 +1,15 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage[active,tightpage]{preview}
+\PreviewBorder=12pt\relax
+\begin{document}
+\preview
+{\begin{tikzpicture}[scale=.6,font=\footnotesize,line join= round,line cap=round>=stealth,x=0.75cm,y=0.75cm]
+\clip(-4.5,-5.5) rectangle (4.7,4.3);
+\draw[->] (-4.5,0) -- (4.5,0) node[below]{\small $x$};
+\draw[->] (0,-5.5) -- (0,4.0) node[left]{\small $y$};
+\draw[smooth,samples=100,domain=-4.1:4.1] plot(\x,{-1/4*(\x)^3+3*(\x)-1});
+\draw [fill=black] (0,0) circle (1pt)node[below left]{\footnotesize $O$};
+\end{tikzpicture}}
+\endpreview
+\end{document}
