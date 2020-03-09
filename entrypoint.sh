@@ -4,8 +4,7 @@ set -e
 # Prepend "psi" if the first argument is not an executable
 if ! type -- "$1" &> /dev/null; then
 #	set -- pdftoppm "$@"
-	set -- /latex2png.sh
-
+	set -- /latex2png.sh $1
 fi
 
 exec "$@"
